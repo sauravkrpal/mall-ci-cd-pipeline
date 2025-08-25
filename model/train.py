@@ -4,7 +4,7 @@ import joblib
 import os
 
 # Load the dataset directly from Mall_Customers.csv
-data = pd.read_csv('Mall_Customers.csv')
+data = pd.read_csv('data/Mall_Customers.csv')
 
 # Select relevant features for clustering (Income & Spending Score)
 X = data[['Annual Income (k$)', 'Spending Score (1-100)']]
