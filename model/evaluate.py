@@ -4,7 +4,7 @@ from sklearn.metrics import silhouette_score
 import numpy as np
 
 # Load the dataset directly from Mall_Customers.csv
-data = pd.read_csv('mall.csv')
+data = pd.read_csv('./data/mall.csv')
 
 # Use the same features that were used for training
 X = data[['Annual Income (k$)', 'Spending Score (1-100)']]
