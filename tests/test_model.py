@@ -10,7 +10,7 @@ class TestModelTraining(unittest.TestCase):
     def setUp(self):
         """Set up test fixtures"""
         self.model_path = 'model/customer_segmentation.pkl'
-        self.data_path = 'mall.csv'
+        self.data_path = './data/mall.csv'
         
     def test_data_file_exists(self):
         """Test if Mall_Customers.csv exists"""
