@@ -27,15 +27,15 @@ jobs:
 
       - name: Train Model
         run: |
-          python train.py  # Fixed path - your files are in root, not model/
+          python ./model/train.py  # Fixed path - your files are in root, not model/
 
       - name: Evaluate Model
         run: |
-          python evaluate.py  # Fixed path
+          python ./model/evaluate.py  # Fixed path
 
       - name: Run Unit Tests
         run: |
-          python test_model.py  # Fixed - your test file is test_model.py, not in tests/
+          python ./tests/test_model.py  # Fixed - your test file is test_model.py, not in tests/
 
       - name: Upload Model Artifact
         uses: actions/upload-artifact@v4  # Updated to latest version
