@@ -4,7 +4,7 @@ import joblib
 import os
 
 # Load the dataset directly from Mall_Customers.csv
-data = pd.read_csv('data/Mall_Customers.csv')
+data = pd.read_csv(r'data/mall.csv')
 
 # Select relevant features for clustering (Income & Spending Score)
 X = data[['Annual Income (k$)', 'Spending Score (1-100)']]
@@ -21,7 +21,7 @@ os.makedirs('data', exist_ok=True)
 os.makedirs('model', exist_ok=True)
 
 # Save processed dataset (with clusters)
-data.to_csv('data/clustered_customers.csv', index=False)
+data.to_csv(r'data/clustered_customers.csv', index=False)
 
 # Save the trained model
 joblib.dump(kmeans, 'model/customer_segmentation.pkl')
